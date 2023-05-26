@@ -9,7 +9,7 @@ The project is built using **HTML5**, **JavaScript**, and **CSS**.
     - "Remove" links to remove specific items from the order.
     - "Complete Order" button to finalize the order.
 - Modal payment screen where users can input their credit card details.
-- Thank you message displayed after the payment is completed.
+- "Thank you" message displayed after the payment is completed.
 <br><br>
 # Future Plans
 For the next version (version 2), I plan to implement the following improvements:
@@ -19,7 +19,8 @@ For the next version (version 2), I plan to implement the following improvements
 - Add functionality for tracking order status and sending notifications.
 - Optimize the app for mobile responsiveness and performance.
 
-<br>
+This app has been deployed to [Netlify](https://fastidious-sunburst-dbca10.netlify.app).
+
 Please feel free to provide any suggestions or feedback to further improve this project.
 
 
