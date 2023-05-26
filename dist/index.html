@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Google font Jost, smythe and Inter  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Jost:wght@400;700&family=Smythe&display=swap" rel="stylesheet">
+    <!-- Link to our css -->
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container-outer">
+        <header>
+            <div class="header-container">
+                <p class="header-name">Jimmy's Diner</p>
+                <p class="header-desc">The best burgers and pizzas in town.</p>
+            </div>
+        </header>
+    
+        <div class="item-container">
+            <div class="item">
+                <p class="item-img">🍕</p>
+                <div class="item-content-container">
+                    <div class="item-text-container">
+                        <p class="item-title item-style">Pizza</p>
+                        <p class="item-desc item-style">pepperoni, mushroom, mozarella</p>
+                        <p class="item-price item-style">$14</p>
+                    </div>
+                    <div class="add-cart-container" >
+                        <div class="circle-border-cart-btn">
+                            <a href="javascript:void(0)" class="add-cart-button" data-food="pizza">+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="item">
+                <p class="item-img">🍔</p>
+                <div class="item-content-container">
+                    <div class="item-text-container">
+                        <p class="item-title item-style">Hamburger</p>
+                        <p class="item-desc item-style">beef, cheese, lettuce</p>
+                        <p class="item-price item-style">$12</p>
+                    </div>
+                    <div class="add-cart-container">
+                        <div class="circle-border-cart-btn">
+                            <a href="javascript:void(0)" class="add-cart-button" data-food="hamburger">+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <p class="item-img">🍺</p>
+                <div class="item-content-container">
+                    <div class="item-text-container">
+                        <p class="item-title item-style">Beer</p>
+                        <p class="item-desc item-style">grain, hops, yeast, water</p>
+                        <p class="item-price item-style">$12</p>
+                    </div>
+                    <div class="add-cart-container">
+                        <div class="circle-border-cart-btn">
+                            <a href="javascript:void(0)" class="add-cart-button" data-food="beer">+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- This section is for the check out container once the user has ordered a few items -->
+        <div class="check-out-container" id="check-out-container" hidden>
+            <p class="check-out-title item-style">Your Order</p>
+            <div class ="check-out-item-container" id="check-out-item-container">
+                <div class="check-out-item-list-container">
+                    <div class="check-out-inner-container">
+                        <p class="check-out-item item-style">Pizza</p>
+                        <a href="javascript:void(0)" class="remove-item" data-remove="pizza">remove</a>
+                    </div>
+                    <div class="check-out-price-container">
+                        <p class="check-out-price item-style">$14</p>
+                        <p class="check-out-qty">X 2</p> 
+                        <p class="check-out-price-total item-style">$28</p>
+                    </div>
+                </div>
+                <div class="check-out-item-list-container">
+                    <div class="check-out-inner-container">
+                        <p class="check-out-item item-style">Beer</p> 
+                        <a href="javascript:void(0)" class="remove-item"  data-remove="beer">remove</a>
+                    </div>
+                    <div class="check-out-price-container">
+                        <p class="check-out-price  item-style">$12</p> 
+                        <p class="check-out-qty">X 2</p>
+                        <p class="check-out-price-total item-style">$24</p>
+                    </div>
+                </div>
+            </div>
+            <div class="check-out-total-container" id="check-out-total-container">
+                <p class="total-price-text item-style total-style">Total price:</p>
+                <p class="total-price item-style total-style">26$</p>
+            </div>
+            <a href="javascript:void(0)" class="complete-order-btn" id="complete-order-btn">Complete Order</a>
+        </div>
+    
+        <!-- This section is for the modal container once the user has clicked on the complete order -->
+        <form class="modal-overlay" id="payment-form" hidden>
+            <div class="payment-details-container modal" >
+                <p class="payment-title">Enter card details</p>
+                <input type="text" pattern="[a-zA-Z ]*" name="customer-name"class="payment-name payment-style" placeholder="Enter your name" required>
+                <input type="number" name="card-number" class="card-number payment-style" placeholder="Enter card number" required>
+                <input type="number" name="cvv-number" class="card-CVV payment-style" placeholder="Enter CVV" required>
+                <button type="submit" class="pay-btn" id="pay-btn">Pay</button>
+            </div>
+        </form>
+        <!-- This section is for showing the message after the user has completed entering the payment detail -->
+        <div class="payment-complete-container" id ="payment-complete-container" hidden>
+            <div class="payment-complete-inner-container">
+                <p class="payment-complete-msg" id="payment-complete-msg">Thank's James! Your order is on its way</p>
+            </div>
+        </div>
+    </div>
+    <script src="bundle.js" type="module"></script>
+</body>
+</html>
