@@ -366,3 +366,10 @@ html, body {
     color: var(--payment-complete-font-color);
     text-align: center;
 }
+
+@media (max-width: 375px) { 
+    html, body {
+       /* Insert Mobile Break Layout Here */
+    }
+
+}
